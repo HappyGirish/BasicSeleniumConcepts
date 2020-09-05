@@ -15,8 +15,10 @@ public class ClickElement {
 	driver.manage().window().maximize();
 	driver.get("https://www.amazon.in//");
 	WebElement element = driver.findElement(By.linkText("Customer Service"));
+	WebElement Cart = driver.findElement(By.xpath("//a[@id='nav-cart']"));
 	Actions act = new Actions(driver);
 	act.moveToElement(element).click().perform();
+	act.moveToElement(Cart).click().perform();
 	System.out.println("Target is Achieved");
 	}
 
